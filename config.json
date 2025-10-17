@@ -1,43 +1,52 @@
 {
-  "serverName": "Production Server",
-  "location": "US-East-1 - Virginia",
+  "serverName": "My Services",
+  "location": "Status Dashboard",
   "services": [
     {
-      "name": "Web Server (Nginx)",
-      "status": "online",
-      "uptime": "99.9%",
-      "responseTime": "45ms"
+      "name": "Music Bot",
+      "description": "Discord music and entertainment bot",
+      "status": "online"
     },
     {
-      "name": "Database (PostgreSQL)",
-      "status": "online",
-      "uptime": "99.8%",
-      "responseTime": "12ms"
+      "name": "Moderation Bot",
+      "description": "Discord server moderation and management",
+      "status": "online"
     },
     {
-      "name": "API Gateway",
-      "status": "maintenance",
-      "uptime": "98.5%",
-      "responseTime": "N/A"
+      "name": "Custom Bot",
+      "description": "Discord utility and fun commands",
+      "status": "maintenance"
     },
     {
-      "name": "Cache Server (Redis)",
-      "status": "online",
-      "uptime": "99.9%",
-      "responseTime": "3ms"
+      "name": "Main Website",
+      "description": "Primary web application",
+      "status": "online"
     },
     {
-      "name": "Mail Server",
-      "status": "online",
-      "uptime": "99.7%",
-      "responseTime": "89ms"
+      "name": "Documentation Site",
+      "description": "API and user documentation",
+      "status": "online"
+    },
+    {
+      "name": "Portfolio Website",
+      "description": "Personal portfolio and projects",
+      "status": "online"
+    },
+    {
+      "name": "API Server",
+      "description": "RESTful API backend",
+      "status": "online"
+    },
+    {
+      "name": "Database Server",
+      "description": "Primary database instance",
+      "status": "online"
+    },
+    {
+      "name": "File Storage",
+      "description": "Media and file hosting server",
+      "status": "offline"
     }
   ],
-  "metrics": {
-    "cpu": 45,
-    "memory": 62,
-    "disk": 38,
-    "network": 1250
-  },
   "lastUpdated": "2025-10-17T10:30:00Z"
 }
