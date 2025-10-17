@@ -27,6 +27,16 @@
       "name": "sguard.dev",
       "description": "Safeguard website",
       "status": "online"
+    },
+    {
+      "name": "build a skyscraper",
+      "description": "Add floors, compete with other servers, and see how high your skyscraper can rise.",
+      "status": "online"
+    },
+    {
+      "name": "vaultcord",
+      "description": "Send encrypted messages Discord can't read. Military-grade privacy for your conversations.",
+      "status": "online"
     }
   ],
   "lastUpdated": "2025-10-17T10:30:00Z"
