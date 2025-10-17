@@ -1,0 +1,43 @@
+{
+  "serverName": "Production Server",
+  "location": "US-East-1 - Virginia",
+  "services": [
+    {
+      "name": "Web Server (Nginx)",
+      "status": "online",
+      "uptime": "99.9%",
+      "responseTime": "45ms"
+    },
+    {
+      "name": "Database (PostgreSQL)",
+      "status": "online",
+      "uptime": "99.8%",
+      "responseTime": "12ms"
+    },
+    {
+      "name": "API Gateway",
+      "status": "maintenance",
+      "uptime": "98.5%",
+      "responseTime": "N/A"
+    },
+    {
+      "name": "Cache Server (Redis)",
+      "status": "online",
+      "uptime": "99.9%",
+      "responseTime": "3ms"
+    },
+    {
+      "name": "Mail Server",
+      "status": "online",
+      "uptime": "99.7%",
+      "responseTime": "89ms"
+    }
+  ],
+  "metrics": {
+    "cpu": 45,
+    "memory": 62,
+    "disk": 38,
+    "network": 1250
+  },
+  "lastUpdated": "2025-10-17T10:30:00Z"
+}
