@@ -64,6 +64,88 @@ h1 {
     font-size: 0.9rem;
 }
 
+.server-status-card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.server-status-card.online {
+    border-color: rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.server-status-card.offline {
+    border-color: rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.server-status-card.maintenance {
+    border-color: rgba(245, 158, 11, 0.4);
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.server-status-main {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.server-status-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.server-status-icon.online {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.server-status-icon.offline {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.server-status-icon.maintenance {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.server-status-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.server-status-text {
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+.server-status-text.online {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.server-status-text.offline {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.server-status-text.maintenance {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
 .services-section {
     background: rgba(30, 41, 59, 0.6);
     backdrop-filter: blur(10px);
@@ -179,8 +261,13 @@ h1 {
         font-size: 1.5rem;
     }
 
-    .metrics-grid {
-        grid-template-columns: 1fr;
+    .server-status-card {
+        padding: 1.5rem;
+    }
+
+    .server-status-icon {
+        width: 60px;
+        height: 60px;
     }
 
     .service-item {
