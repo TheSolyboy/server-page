@@ -1,6 +1,7 @@
 {
-  "serverName": "My Services",
+  "serverName": "My Server",
   "location": "Status Dashboard",
+  "serverStatus": "online",
   "services": [
     {
       "name": "Music Bot",
@@ -41,11 +42,6 @@
       "name": "Database Server",
       "description": "Primary database instance",
       "status": "online"
-    },
-    {
-      "name": "File Storage",
-      "description": "Media and file hosting server",
-      "status": "offline"
     }
   ],
   "lastUpdated": "2025-10-17T10:30:00Z"
