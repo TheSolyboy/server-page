@@ -1,46 +1,31 @@
 {
-  "serverName": "My Server",
+  "serverName": "Solynex Server",
   "location": "Status Dashboard",
   "serverStatus": "online",
   "services": [
     {
-      "name": "Music Bot",
-      "description": "Discord music and entertainment bot",
+      "name": "Safeguard",
+      "description": "SafeGuard is a security-focused multitool bot designed to protect and manage Discord servers.",
       "status": "online"
     },
     {
-      "name": "Moderation Bot",
-      "description": "Discord server moderation and management",
+      "name": "Coinlynx",
+      "description": "Practice with real Solana memecoin data using virtual money on our advanced paper trading platform.",
       "status": "online"
     },
     {
-      "name": "Custom Bot",
-      "description": "Discord utility and fun commands",
+      "name": "coinlynx.xyz discord bot",
+      "description": "All-in-one crypto bot for charts, prices, and token insights. Track any Solana or meme token in real time.",
       "status": "maintenance"
     },
     {
-      "name": "Main Website",
-      "description": "Primary web application",
+      "name": "solynex.me",
+      "description": "My main site",
       "status": "online"
     },
     {
-      "name": "Documentation Site",
-      "description": "API and user documentation",
-      "status": "online"
-    },
-    {
-      "name": "Portfolio Website",
-      "description": "Personal portfolio and projects",
-      "status": "online"
-    },
-    {
-      "name": "API Server",
-      "description": "RESTful API backend",
-      "status": "online"
-    },
-    {
-      "name": "Database Server",
-      "description": "Primary database instance",
+      "name": "sguard.dev",
+      "description": "Safeguard website",
       "status": "online"
     }
   ],
