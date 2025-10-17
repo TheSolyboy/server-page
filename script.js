@@ -20,32 +20,8 @@ function updateDashboard(config) {
     const lastUpdated = new Date(config.lastUpdated);
     document.getElementById('lastUpdated').textContent = formatDateTime(lastUpdated);
     
-    // Update metrics
-    updateMetric('cpu', config.metrics.cpu);
-    updateMetric('memory', config.metrics.memory);
-    updateMetric('disk', config.metrics.disk);
-    document.getElementById('networkValue').textContent = config.metrics.network;
-    
     // Update services
     renderServices(config.services);
-}
-
-// Update individual metric with progress bar
-function updateMetric(type, value) {
-    const valueElement = document.getElementById(`${type}Value`);
-    const progressElement = document.getElementById(`${type}Progress`);
-    
-    valueElement.textContent = `${value}%`;
-    progressElement.style.width = `${value}%`;
-    
-    // Change color based on usage level
-    if (value >= 80) {
-        progressElement.style.background = 'linear-gradient(90deg, #ef4444 0%, #dc2626 100%)';
-    } else if (value >= 60) {
-        progressElement.style.background = 'linear-gradient(90deg, #f59e0b 0%, #d97706 100%)';
-    } else {
-        progressElement.style.background = 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)';
-    }
 }
 
 // Render all services
@@ -66,23 +42,20 @@ function createServiceElement(service) {
     
     const statusIcon = getStatusIcon(service.status);
     const statusClass = service.status.toLowerCase();
+    const statusText = service.status.charAt(0).toUpperCase() + service.status.slice(1);
     
     item.innerHTML = `
         <div class="service-main">
             <div class="service-status ${statusClass}">
                 ${statusIcon}
             </div>
-            <div class="service-name">${service.name}</div>
+            <div>
+                <div class="service-name">${service.name}</div>
+                ${service.description ? `<div class="service-description">${service.description}</div>` : ''}
+            </div>
         </div>
-        <div class="service-stats">
-            <div class="service-stat">
-                <div class="service-stat-label">Uptime</div>
-                <div class="service-stat-value">${service.uptime}</div>
-            </div>
-            <div class="service-stat">
-                <div class="service-stat-label">Response</div>
-                <div class="service-stat-value">${service.responseTime}</div>
-            </div>
+        <div class="service-badge ${statusClass}">
+            ${statusText}
         </div>
     `;
     
