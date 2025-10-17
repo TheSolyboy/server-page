@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Status Dashboard</title>
+    <title>Server Status</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <h1 id="serverName">Server Status</h1>
-                    <p class="location" id="location">Loading...</p>
+                    <p class="location" id="location">Checking status...</p>
                 </div>
             </div>
             <div class="last-updated">
@@ -28,84 +28,20 @@
             </div>
         </header>
 
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-icon cpu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                        <rect x="9" y="9" width="6" height="6"></rect>
-                        <line x1="9" y1="1" x2="9" y2="4"></line>
-                        <line x1="15" y1="1" x2="15" y2="4"></line>
-                        <line x1="9" y1="20" x2="9" y2="23"></line>
-                        <line x1="15" y1="20" x2="15" y2="23"></line>
-                        <line x1="20" y1="9" x2="23" y2="9"></line>
-                        <line x1="20" y1="14" x2="23" y2="14"></line>
-                        <line x1="1" y1="9" x2="4" y2="9"></line>
-                        <line x1="1" y1="14" x2="4" y2="14"></line>
-                    </svg>
+        <div class="server-status-card" id="serverStatusCard">
+            <div class="server-status-main">
+                <div class="server-status-icon" id="serverStatusIcon">
+                    <!-- Icon will be added by JS -->
                 </div>
-                <div class="metric-info">
-                    <div class="metric-label">CPU Usage</div>
-                    <div class="metric-value" id="cpuValue">-</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="cpuProgress"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="metric-card">
-                <div class="metric-icon memory">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M10 2v2"></path>
-                        <path d="M14 2v2"></path>
-                        <path d="M10 20v2"></path>
-                        <path d="M14 20v2"></path>
-                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-                        <path d="M9 9h6v6H9z"></path>
-                    </svg>
-                </div>
-                <div class="metric-info">
-                    <div class="metric-label">Memory</div>
-                    <div class="metric-value" id="memoryValue">-</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="memoryProgress"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="metric-card">
-                <div class="metric-icon disk">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                    </svg>
-                </div>
-                <div class="metric-info">
-                    <div class="metric-label">Disk Usage</div>
-                    <div class="metric-value" id="diskValue">-</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="diskProgress"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="metric-card">
-                <div class="metric-icon network">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>
-                </div>
-                <div class="metric-info">
-                    <div class="metric-label">Network</div>
-                    <div class="metric-value" id="networkValue">-</div>
-                    <div class="metric-subtitle">MB/s</div>
+                <div>
+                    <h2 class="server-status-title">Server Status</h2>
+                    <p class="server-status-text" id="serverStatusText">Checking...</p>
                 </div>
             </div>
         </div>
 
-        <div class="services-section">
-            <h2>Services Status</h2>
+        <div class="services-section" id="servicesSection" style="display: none;">
+            <h2>Running Services</h2>
             <div id="servicesList" class="services-list">
                 <!-- Services will be populated by JavaScript -->
             </div>
